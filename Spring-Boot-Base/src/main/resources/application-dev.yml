@@ -1,0 +1,4 @@
+server:
+  port: 8091
+# debug: true   日志级别
+# trace: true   日志级别

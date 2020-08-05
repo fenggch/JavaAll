@@ -1,0 +1,13 @@
+server:
+  port: 8090
+spring:
+  profiles:
+    active: dev
+
+com:
+  cheng: feng
+
+project:
+  info:
+    name: springbase
+    version: 1.0
