@@ -1,5 +1,9 @@
 package com.cheng.system.controller;
 
+import cn.hutool.http.HttpRequest;
+import cn.hutool.http.HttpResponse;
+import cn.hutool.http.HttpUtil;
+import cn.hutool.json.JSONUtil;
 import com.cheng.system.mapper.UserDao;
 import com.cheng.system.model.UserModel;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,6 +13,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * class functional description
@@ -27,7 +34,17 @@ public class UserController {
 
     @GetMapping("get")
     public Object getUser(){
-        return "1";
+        Map<String,Object> map = new HashMap();
+        map.put("account","admin");
+        map.put("password","123456");
+
+        String s = JSONUtil.toJsonStr(map);
+        HttpRequest post1 = HttpUtil.createPost("http://localhost:8080/api/v1/sso/login");
+        post1.body(s);
+        HttpResponse execute = post1.execute();
+        String body = execute.body();
+   //     String post = HttpUtil.post("http://127.0.0.1:8080/api/v1/sso/login", map);
+        return body;
     }
 
     @PostMapping("add")

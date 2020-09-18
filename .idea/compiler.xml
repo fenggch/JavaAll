@@ -8,12 +8,14 @@
         <outputRelativeToContentRoot value="true" />
         <module name="Spring-Boot-Base" />
         <module name="SpringBootData" />
+        <module name="SpringBootDocker" />
         <module name="SpringBootORM" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="Spring-Boot-Base" target="1.8" />
       <module name="SpringBootData" target="1.8" />
+      <module name="SpringBootDocker" target="1.8" />
       <module name="SpringBootORM" target="1.8" />
     </bytecodeTargetLevel>
   </component>
@@ -21,6 +23,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="Spring-Boot-Base" options="-parameters" />
       <module name="SpringBootData" options="-parameters" />
+      <module name="SpringBootDocker" options="-parameters" />
       <module name="SpringBootORM" options="-parameters" />
     </option>
   </component>

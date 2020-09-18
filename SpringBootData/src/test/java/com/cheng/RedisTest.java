@@ -13,8 +13,9 @@ import org.springframework.test.context.junit4.SpringRunner;
  * @since 2020-06-22
  */
 
-@RunWith(SpringRunner.class)
-@SpringBootTest(classes = BootDataApplication.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+//@RunWith(SpringRunner.class)
+//@SpringBootTest(classes = BootDataApplication.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 
-public class RedisTest {
+public class RedisTest extends TestBase{
+
 }

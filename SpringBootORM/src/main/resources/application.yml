@@ -13,3 +13,5 @@ mapper:
   mappers: com.cheng.config.BaseMapper
   not-empty: false
   identity: MYSQL
+server:
+  port: 9090
